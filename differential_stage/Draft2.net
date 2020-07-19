@@ -1,0 +1,21 @@
+* C:\daniel\tampere_summer\ltspice_design\differential_stage\Draft2.asc
+M1 N003 N003 N001 Vdd pmos45bulk l=200n w=4700n as=1.32p ad=1.32p ps=9.96u pd=9.96u
+I1 N003 0 50µ
+M2 N004 N003 N002 Vdd pmos45bulk l=200n w=4700n as=1.32p ad=1.32p ps=9.96u pd=9.96u
+V1 Vdd 0 1
+M3 N001 N001 Vdd Vdd pmos45bulk l=200n w=4700n as=1.32p ad=1.32p ps=9.96u pd=9.96u
+M4 N002 N001 Vdd Vdd pmos45bulk l=200n w=4700n as=1.32p ad=1.32p ps=9.96u pd=9.96u
+M5 Vout Vin+ N004 Vdd pmos45bulk l=200n w=10u as=1.37p ad=1.37p ps=10.36u pd=10.36u
+M6 N005 Vin- N004 Vdd pmos45bulk l=200n w=10u as=1.37p ad=1.37p ps=10.36u pd=10.36u
+M7 Vout N005 0 0 nmos45bulk l=200n w=1500n as=145.60f ad=145.60f ps=1.60u pd=1.60u
+M8 N005 N005 0 0 nmos45bulk l=200n w=1500n as=145.60f ad=145.60f ps=1.60u pd=1.60u
+V2 Vin+ 0 SINE(0.1 40u 1meg) AC 10u 0
+V3 Vin- 0 SINE(0.1 40u 1meg 0 0 180) AC 10u 180
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\Asus\OneDrive - TUNI.fi\Documents\LTspiceXVII\lib\cmp\standard.mos
+.lib ../libs/45nm_bulk.pm
+.tran 5u
+.step param LEN 90n 200n 30n
+.backanno
+.end

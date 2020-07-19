@@ -1,0 +1,26 @@
+Circuit: * C:\daniel\tampere_summer\ltspice_design\differential_stage\Draft2.asc
+
+Direct Newton iteration for .op point succeeded.
+.step len=9e-008
+.step len=1.2e-007
+.step len=1.5e-007
+.step len=1.8e-007
+.step len=2e-007
+
+Date: Sun Jul 19 17:19:23 2020
+Total elapsed time: 0.519 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2089
+traniter = 2082
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 44
+fillins = 0
+solver = Normal
+Matrix Compiler1: 5.65 KB object code size  1.0/0.6/[0.3]
+Matrix Compiler2: 5.20 KB object code size  0.5/0.6/[0.3]
+
